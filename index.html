@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Navigation and Slideshow</title>
+  <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS eksternal -->
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="C:\Users\ASUS\Documents\algoritma\biodata\Img\gambar 1.jpg" alt="ad 1">
+    </div>
+    <div class="slide fade">
+      <img src="C:\Users\ASUS\Documents\algoritma\biodata\Img\GOPR4364.JPG" alt="Ad 2">
+    </div>
+    <div class="slide fade">
+      <img src="C:\Users\ASUS\Documents\algoritma\biodata\Img\GOPR2322.JPG" alt="Ad 3">
+    </div>
+
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+  </div>
+
+  <table>
+    <tr>
+      <td style="width: 20%;">
+        <div class="header">
+          <a href="#" onclick="showContent('home')">Home</a>
+          <a href="#" onclick="showContent('education')">Education</a>
+          <a href="#" onclick="showContent('family')">Family</a>
+          <a href="#" onclick="showContent('about')">About</a>
+        </div>
+      </td>
+      <td style="width: 80%;"> 
+
+        <!-- Konten Home -->
+        <div class="content" id="home-content">
+          <h2>Home</h2>
+          <p>Welcome to the homepage! Here you can find various information about my site.</p>
+          <div class="buttons-container">
+            <button class="nav-button" onclick="nextPage('education')">Next</button>
+          </div>
+        </div>
+
+        <!-- Konten Education -->
+        <div class="content" id="education-content" style="display:none;">
+          <h2>Education</h2>
+          <ul class="education-list">
+            <li>TK - Al Maarif</li>
+            <li>SD - SDN 7 Jimbaran</li>
+            <li>SMP - SMP Taman Sastra</li>
+            <li>SMK - SMKN 1 Kuta Selatan</li>
+            <li>NOW - Instiki (Institut Bisnis Dan Teknologi)</li>
+          </ul>
+          <div class="buttons-container">
+            <button class="nav-button" onclick="previousPage('home')">Previous</button>
+            <button class="nav-button" onclick="nextPage('family')">Next</button>
+          </div>
+        </div>
+
+        <!-- Konten Family -->
+        <div class="content" id="family-content" style="display:none;">
+          <h2>Family</h2>
+          <div class="personal-info">
+            <h3>Data Pribadi:</h3>
+            <ul>
+              <li>Saya adalah anak ke 2 dari 2 bersaudara saya lahir pada 2005 tepatnya, Trenggalek 19-11-2005, keluarga saya merupakan keluarga yang bahagia dan harmonis.</li>
+            </ul>
+          </div>
+
+          <h3>Pohon Keluarga</h3>
+          <div class="family-tree">
+            <li class="family-member">
+              <strong>Ayah:</strong>
+              <span>Nama: Hari Santoso</span>
+              <span>Usia: 49</span>
+              <span>Pekerjaan: Karyawan Swasta</span>
+            </li>
+            <li class="family-member">
+              <strong>Ibu:</strong>
+              <span>Nama: I Made Suartini</span>
+              <span>Usia: 44</span>
+              <span>Pekerjaan: Karyawan Swasta</span>
+            </li>
+            <div class="family-member">
+              <strong>Anak Pertama:</strong>
+              <span>Nama: Vita Corisa</span>
+              <span>Usia: 24</span>
+              <span>Pekerjaan: Accounting payable</span>
+            </div>
+            <div class="family-member">
+              <strong>Anak Kedua:</strong>
+              <span>Nama: Alfin Maulana</span>
+              <span>Usia: 19</span>
+              <span>Pekerjaan: Student</span>
+            </div>
+          </div>
+
+          <div class="buttons-container">
+            <button class="nav-button" onclick="previousPage('education')">Previous</button>
+            <button class="nav-button" onclick="nextPage('about')">Next</button>
+          </div>
+        </div>
+
+        <!-- Konten About -->
+        <div class="content" id="about-content" style="display:none;">
+          <h2>About</h2>
+          <div class="personal-info">
+            <h3>Data Pribadi:</h3>
+            <ul>
+              <li><strong>Nama:</strong> Alfin Maulana</li>
+              <li><strong>NIM:</strong> 2401010433</li>
+              <li><strong>Jurusan:</strong> TI-MTI</li>
+              <li><strong>Hobby:</strong> Basket, Gitar</li>
+            </ul>
+          </div>
+
+          <button class="nav-button" onclick="showPhoto()">Lihat Selengkapnya</button>
+
+          <div class="photo-text-container" id="photo-text-container" style="display: none;">
+            <div class="photo-container">
+              <img src="C:\Users\ASUS\Documents\algoritma\biodata\Img\PXL_20240808_161204825 (1).jpg" alt="About Photo">
+            </div>
+
+            <div class="text-container">
+              <p class="quote">"A programmer’s life is a journey of solving problems and creating something beautiful."</p>
+              <p class="author">- Unknown</p>
+            </div>
+          </div>
+
+          <div class="buttons-container">
+            <button class="nav-button" onclick="previousPage('family')">Previous</button>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+  </table>
+
+  <script src="script.js"></script> <!-- Menghubungkan file JavaScript eksternal -->
+
+</body>
+</html>
