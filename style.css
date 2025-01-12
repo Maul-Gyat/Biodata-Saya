@@ -1,134 +1,163 @@
 /* Style utama untuk halaman */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Desain untuk slideshow */
-  .slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .slide {
-    display: none;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-  }
-  
-  /* Desain Header (Menu Navigasi) */
-  .header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  .header a {
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    text-decoration: none;
-    margin-bottom: 10px;
-    width: 200px;
-    display: block;
-    background-color: #333;
-    border-radius: 4px;
-    margin: 5px 0;
-  }
-  
-  .header a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Styling untuk tabel konten */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  td {
-    padding: 20px;
-    vertical-align: top;
-    border: 1px solid #ddd;
-  }
-  
-  .content {
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 20px;
-  }
-  
-  /* Desain tombol navigasi */
-  .nav-button {
-    margin-top: 20px;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .nav-button:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Styling untuk keluarga */
-  .family-tree {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .family-member {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    padding-left: 10px;
-    border-left: 2px solid #000;
-    margin-bottom: 15px;
-  }
-  
-  .family-member span {
-    margin-top: 5px;
-  }
-  
-  /* Styling gambar dan teks pada About */
-  .photo-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 20px;
-  }
-  
-  .photo-container img {
-    width: 150px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .text-container {
-    max-width: 60%;
-    margin-left: 10px;
-  }
-  
-  .quote {
-    font-size: 18px;
-    font-style: italic;
-    color: #555;
-  }
-  
-  .author {
-    text-align: right;
-    font-weight: bold;
-    color: #333;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Desain untuk slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Tombol navigasi di kiri dan kanan (kotak dan lebih transparan) */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* Warna latar belakang tombol lebih transparan */
+  color: white;
+  padding: 12px 20px; /* Padding lebih besar untuk tombol kotak */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px; /* Menjaga sudut agar tetap sedikit melengkung */
+  z-index: 1; /* Agar tombol tetap terlihat di atas gambar */
+  opacity: 0.7; /* Mengurangi opasitas tombol untuk membuatnya lebih transparan */
+  transition: opacity 0.3s; /* Transisi saat hover */
+}
+
+.prev {
+  left: 10px; /* Menempatkan tombol kiri di sisi kiri */
+}
+
+.next {
+  right: 10px; /* Menempatkan tombol kanan di sisi kanan */
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang tombol saat hover */
+  opacity: 1; /* Mengubah opasitas menjadi 1 saat hover */
+}
+
+/* Desain Header (Menu Navigasi) */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.header a {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  width: 200px;
+  display: block;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Styling untuk tabel konten */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 20px;
+  vertical-align: top;
+  border: 1px solid #ddd;
+}
+
+.content {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Desain tombol navigasi */
+.nav-button {
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Styling untuk keluarga */
+.family-tree {
+  list-style-type: none;
+  padding: 0;
+}
+
+.family-member {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  margin-bottom: 15px;
+}
+
+.family-member span {
+  margin-top: 5px;
+}
+
+/* Styling gambar dan teks pada About */
+.photo-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.photo-container img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.text-container {
+  max-width: 60%;
+  margin-left: 10px;
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
